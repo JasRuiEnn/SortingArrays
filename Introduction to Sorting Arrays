@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE 11
+float M(int a[]);
+int main(int argc, char *argv[])
+{
+    int a[SIZE]={ 1, 3, 6, 2, 4, 8, 55, 10, 32, 28, 5};
+    float x;
+    
+    x=M(a);
+printf("%f\n",x);
+    A(a);
+    
+  system("PAUSE");	
+  return 0;
+}
+
+float M(int a[])
+{
+    int i;
+    float m=0;
+    for (i=0; i<SIZE;i++){
+    m+=a[i];
+    }
+    
+     
+     return m/11;
+}
+
+int A(int a[])
+{   
+int pass;
+int hold;
+int i;
+
+    for ( pass= 1; pass < SIZE; pass++){
+        for (i= 0; i < SIZE-1 ; i++){
+            if (a[i]<a[i+1]){
+               hold=a[i];
+               a[i]=a[i+1];
+               a[i+1]=hold;
+               }
+        }
+  }
+ for (i=0; i<SIZE;i++){
+    printf("%5d\n",a[i]);
+    }
+  
+               
+}
